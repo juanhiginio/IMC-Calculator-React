@@ -4,7 +4,7 @@ export function VistaPersona( { persona } : { persona: any } ) {
   return (
     <div className={style.vista_persona}>
         <section className={style.vista_persona__foto__contenedor}>
-            <img src={persona.linkImagen} alt={persona.nombre}></img>
+            <img src={`/public/images/${persona.linkImagen}`} alt={persona.nombre}></img>
         </section>
         <section className={style.vista_persona__nombre__contenedor}>
             <h3 className={style.vista_persona__nombre}>{persona.nombre}</h3>

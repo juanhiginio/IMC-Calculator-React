@@ -1,11 +1,14 @@
+import { useState } from "react";
 import { VistaPersona } from "../VistaPersona/VistaPersona";
 import style from "./AsideInfoPersonas.module.css";
 
 export default function AsideInfoPersonas() {
+
+  // Lista Personas
   let personas = [
     {
       nombre: "Juan Pérez",
-      linkImagen: "https://example.com/juanperez.jpg",
+      linkImagen: "juanPerez.jpeg",
       linkGitHub: "https://github.com/juanperez",
       telefono: "+34 600 123 456",
       correo: "juanperez1@hotmail.com",
@@ -14,7 +17,7 @@ export default function AsideInfoPersonas() {
     },
     {
       nombre: "María Gómez",
-      linkImagen: "https://example.com/mariagomez.jpg",
+      linkImagen: "mariaGomez.jpg",
       linkGitHub: "https://github.com/mariagomez",
       telefono: "+34 600 987 654",
       correo: "mariagomez1@hotmail.com",
@@ -22,11 +25,25 @@ export default function AsideInfoPersonas() {
         "Ingeniera de software con experiencia en desarrollo web y móvil, apasionada por la innovación tecnológica.",
     }
   ];
+
+  // -------------------------------------------------------
+
+  const [personaSeleccionada, setPersonaSeleccionada] = useState(personas[0]);
+
+  function manejarSeleccionPersona(persona: any) {
+    setPersonaSeleccionada(persona);
+  }
+
   return (
     <aside className={style.aside_info_personas}>
-      {personas.map((persona) => (
-        <VistaPersona key={persona.nombre} persona={persona}></VistaPersona>
-      ))}
+      <div className={style.aside_info_personas__elegir__persona}>
+        {personas.map((persona) => (
+          <button className={style.aside_info_personas__elegir__persona__boton} key={persona.nombre} onClick={() => manejarSeleccionPersona(persona)}>
+            {persona.nombre}
+          </button>
+        ))}
+      </div>
+        <VistaPersona persona={personaSeleccionada}></VistaPersona>
     </aside>
   );
 }

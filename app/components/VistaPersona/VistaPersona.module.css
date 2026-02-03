@@ -1,10 +1,99 @@
 .vista_persona {
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 16px;
+
+    padding: 24px;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+
+    margin-bottom: 25px;
+
+    overflow-y: auto;
+}
+
+/* ========================= */
+/* FOTO */
+/* ========================= */
+.vista_persona__foto__contenedor {
+    width: 240px;
+    height: 240px;
+
+    border-radius: 50%;
+    overflow: hidden;
+
+    border: 4px solid #bbb;
+    background-color: #e0e0e0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vista_persona__foto__contenedor img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ========================= */
+/* NOMBRE */
+/* ========================= */
+.vista_persona__nombre__contenedor {
+    margin-top: 8px;
+}
+
+.vista_persona__nombre {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #222;
+    text-align: center;
+}
+
+/* ========================= */
+/* INFO */
+/* ========================= */
+.vista_persona__info__contenedor {
+    width: 100%;
+}
+
+.vista_persona__info__contenedor ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
     gap: 10px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: beige;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vista_persona__info__contenedor li {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.4;
+}
+
+/* GitHub */
+.vista_persona__link_github a {
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.vista_persona__link_github a:hover {
+    text-decoration: underline;
+}
+
+/* Descripción */
+.vista_persona__descripcion__contenedor {
+    margin-top: 35px;
+    font-size: 1.2rem;
+    color: #444;
+    text-align: center;
 }
