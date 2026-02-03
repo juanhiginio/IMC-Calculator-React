@@ -10,6 +10,10 @@ import {
 import type { Route } from "./+types/root";
 import "./app.css";
 
+// Importación de Componentes Propios
+import Header from "./components/Header/Header";
+import AsideInfoPersonas from "./components/AsideInfoPersonas/AsideInfoPersonas";
+
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
@@ -33,7 +37,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        {children}
+        <Header></Header>
+        <main className="main-content">
+          {children}
+          <AsideInfoPersonas></AsideInfoPersonas>
+        </main>
         <ScrollRestoration />
         <Scripts />
       </body>

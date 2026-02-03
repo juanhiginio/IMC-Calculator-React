@@ -1,0 +1,20 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.main-content {
+    flex: 1;                 /* ocupa lo que sobra bajo el header */
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 500px;
+    margin-top: 10px;
+    height: 100vh;
+    overflow-y: auto;
+}
