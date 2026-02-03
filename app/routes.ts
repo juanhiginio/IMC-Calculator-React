@@ -1,5 +1,9 @@
-import { type RouteConfig, index } from "@react-router/dev/routes";
+import { type RouteConfig, index, route } from "@react-router/dev/routes";
+
 
 export default [
     index("routes/Inicio/Inicio.tsx"),
+    route("inicio", "routes/Inicio/Inicio.tsx", { id : "inicioRoute" }),
+
+    
 ] satisfies RouteConfig;

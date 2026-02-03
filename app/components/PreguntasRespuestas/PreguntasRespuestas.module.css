@@ -1,0 +1,83 @@
+ .contenedor {
+  max-width: 700px;
+  margin-top: 20px;
+}
+
+.item {
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 10px;
+}
+
+/* BOTÓN DE LA PREGUNTA */
+.pregunta {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 15px 10px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.pregunta:hover {
+  background-color: #f5f5f5;
+}
+
+/* PREGUNTA ACTIVA */
+.activa {
+  background-color: #eef3ff;
+  border-left: 4px solid #da1212;
+  padding-left: 6px;
+}
+
+/* BURBUJA DE RESPUESTA */
+.respuesta {
+  position: relative;
+  margin: 14px 20px 24px;
+  padding: 18px 20px;
+  font-size: 14px;
+  color: #333;
+
+  background-color: #f7f9fc;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+
+  animation: bubbleIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transform-origin: top left;
+}
+
+/* COLITA DE LA BURBUJA */
+.respuesta::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 28px;
+
+  width: 18px;
+  height: 18px;
+  background-color: #f7f9fc;
+  transform: rotate(45deg);
+
+  box-shadow: -3px -3px 6px rgba(0, 0, 0, 0.03);
+}
+
+/* ANIMACIÓN CON SWING */
+@keyframes bubbleIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.92);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(3px) scale(1.03);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
