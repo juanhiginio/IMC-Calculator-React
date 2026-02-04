@@ -1,0 +1,43 @@
+.resultado-ppt {
+  margin: 40px auto;
+  padding: 30px;
+  max-width: 600px;
+
+  border-radius: 18px;
+  background: #f7f9fc;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.resultado-img {
+  width: 180px;              
+  margin-bottom: 10px;
+  animation: aparecer 0.35s ease;
+}
+
+.resultado-ppt h3 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.resultado-ppt p {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+@keyframes aparecer {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,33 @@
+.ppt-contadores {
+  margin-top: 60px;
+  padding: 20px 0;
+
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+
+  font-size: 1.4rem;
+}
+
+.ppt-contadores p {
+  margin: 0;
+  font-weight: 600;
+}
+
+.ppt-contadores strong {
+  font-size: 1.6rem;
+}
+
+.ppt-contadores {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.ppt-opciones {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+}

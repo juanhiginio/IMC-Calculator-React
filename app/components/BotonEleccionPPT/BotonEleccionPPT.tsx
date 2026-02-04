@@ -1,20 +1,29 @@
+import styles from "./BotonEleccionPPT.module.css";
+
+type Props = {
+  id: "piedra" | "papel" | "tijera";
+  nombre: string;
+  imagen: string;
+  onElegir: (id: "piedra" | "papel" | "tijera") => void;
+};
+
 export default function BotonEleccionPPT({
-  texto,
-  seleccionado,
-  onClick,
-}: {
-  texto: string;
-  seleccionado: boolean;
-  onClick: () => void;
-}) {
+  id,
+  nombre,
+  imagen,
+  onElegir,
+}: Props) {
   return (
     <button
-      className={`boton-eleccion-ppt ${
-        seleccionado ? "boton-eleccion-ppt--seleccionado" : ""
-      }`}
-      onClick={onClick}
+      className={styles.botonPPT}
+      onClick={() => onElegir(id)}
     >
-      {texto}
+      <img
+        src={imagen}
+        alt={nombre}
+        className={styles.imagen}
+      />
+      <span className={styles.nombre}>{nombre}</span>
     </button>
   );
 }

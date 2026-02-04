@@ -1,0 +1,31 @@
+.botonPPT {
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+  transition: transform 0.2s ease;
+}
+
+.botonPPT:hover {
+  transform: scale(1.08);
+}
+
+.imagen {
+  width: 160px;
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.nombre {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  letter-spacing: 0.5px;
+}
